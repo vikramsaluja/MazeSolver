@@ -3,6 +3,7 @@
  * @author Ms. Namasivayam
  * @version 03/04/2022
  */
+// Vikram Saluja Maze Solver
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -146,7 +147,13 @@ public class Maze {
      * @return boolean true/false
      */
     public boolean isValidCell(int row, int col) {
-        // TODO: Complete this function
-        return true;
+        // Check to make sure that the row and column is valid
+        if(row < 0 || row >= numRows || col < 0 || col >= numCols){
+            return false;
+        }
+
+        MazeCell check = mazeGrid[row][col];
+        // Return true if the cell has not been explored and is not a wall
+        return !check.isExplored() && !check.isWall();
     }
 }

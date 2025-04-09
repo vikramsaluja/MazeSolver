@@ -3,6 +3,7 @@
  * @author Ms. Namasivayam
  * @version 03/10/2023
  */
+// Vikram Saluja Maze Solver
 
 public class MazeCell {
     private boolean explored;
